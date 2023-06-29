@@ -6,12 +6,16 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+const litro = Number(prompt(`Informe o litro do combustível:`).trim().replace(",","."));
+const quant = Number(prompt(`Informe a quantidade de litros:`).trim().replace(",","."));
+const transPub = Number(prompt(`Informe o preço do transporte público \nque deverá pagar para se deslocar ao trabalho diariamente:`).trim().replace(",","."));
+const idavlt1 = (litro * quant) * 2
+const idavlt2 = litro * 2
     //Processamento
-
-    
+let mensagem = ((litro * quant) < transPub)? `É mais barato ir com carro, pois custa: R$${idavlt1.toFixed(2).replace(",",".")}` :
+`É mais barato ir com tranporte publico, pois custa: R$${transPub.toFixed(2).replace(",",".")}`
     //Saída
+    alert(mensagem)
 
     
 </script>

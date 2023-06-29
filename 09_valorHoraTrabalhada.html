@@ -8,11 +8,15 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+const horaTra = Number(prompt(`Qual foi a quantidade de horas trabalhadas?`).trim());
+const recebe = Number(prompt(`Quantos você recebe por hora trabalhada?`).trim().replace(",","."));
+const salarioSem = horaTra * recebe
+const aum1 = salarioSem + (salarioSem * 0.20) 
+const aum2 = salarioSem + (salarioSem * 0.60)
     //Processamento
-
-    
+let mensagem = (salarioSem <= 45)? `Não haverá adicional.` :
+(aum1 <=  60)? `Haverá desconto de 20%.` :
+`${aum2 <= 45} Haverá desconto de 30%.`
     //Saída
-
+alert(mensagem)
 </script>
